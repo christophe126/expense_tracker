@@ -1,14 +1,7 @@
-#---
-# Excerpted from "Effective Testing with RSpec 3",
-# published by The Pragmatic Bookshelf.
-# Copyrights apply to this code. It may not be used to create training material,
-# courses, books, articles, and the like. Contact us if you are in doubt.
-# We make no guarantees that this code is fit for any purpose.
-# Visit http://www.pragmaticprogrammer.com/titles/rspec3 for more book information.
-#---
 require 'rack/test'
 require 'json'
 require_relative '../../app/api'
+
 
 module ExpenseTracker
   RSpec.describe 'Expense Tracker API' do
@@ -46,7 +39,6 @@ module ExpenseTracker
         'amount' => 95.20,
         'date'   => '2017-06-11'
       )
-      # POST coffee, zoo, and groceries expenses here
 
       get '/expenses/2017-06-10'
       expect(last_response.status).to eq(200)
