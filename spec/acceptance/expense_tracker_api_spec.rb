@@ -15,7 +15,6 @@ module ExpenseTracker
         'payee' => 'Starbucks',
         'amount' => 5.75,
         'date' => '2017-06-10'
-        'date' => '2017-06-10'
       }
       post '/expenses', JSON.generate(coffee)
       expect(last_response.status).to eq(200)
